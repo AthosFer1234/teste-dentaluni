@@ -1,0 +1,66 @@
+/* Cabeçalho */
+.header {
+	background-color: #FAF9F6;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.logo {
+	width: 300px;
+	position: fixed;
+	top: 15px;
+	left: 10px;
+}
+
+.nav {
+	height: 75px;
+}
+
+.menu-text {
+	color: #404040;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	margin: auto;
+}
+
+/* Corpo */
+.container {
+	padding: 16px;
+	margin-top: 80px;
+}
+
+/* Formulário */
+.busca-dentista {
+	border: solid 1px black;
+	border-radius: 15px;
+	padding: 20px;
+}
+
+/* Rodapé */
+.footer {
+	position: relative;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	background-color: #932125;
+	color: white;
+	padding: 15px;
+	height: 60px;
+	width: 100%;
+}
+
+.footer p {
+	margin-bottom: 0;
+}
+
+.footer > .right {
+	position: absolute;
+	right: 15px;
+}
+
+.linkedin {
+	width: 50px;
+}

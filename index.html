@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>DentalUni</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+		<link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="./style.css">
+	</head>
+	<body>
+		<div class="header">
+			<div class="row">
+				<div class="col-md-6">
+					<a href="https://www.dentaluni.com.br"><img src="./images/logo-dentaluni.png" class="logo"></a>
+				</div>
+				<div class="col-md-6 nav">
+					<a href="#" class="menu-text">A COOPERATIVA</a>
+					<a href="#" class="menu-text">BLOG</a>
+					<a href="#" class="menu-text">PLANOS ODONTOLÓGICOS</a>
+					<a href="#" class="menu-text">ENCONTRE SEU DENTISTA</a>
+					<a href="#" class="menu-text">OUVIDORIA</a>
+					<a href="#" class="menu-text">IDSS</a>
+					<a href="#" class="menu-text">CONTATOS</a>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<form class="busca-dentista" action="#" method="post">
+				<h4>Buscar Dentista</h4>
+				<div class="row">
+					<div class="form-group col-md-12">
+						<label>Nome do(a) Dentista / Clínica</label>
+						<input type="text" name="dent-clin" id="dent-clin" class="form-control">
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-md-2">
+						<label>Estado</label>
+						<select name="uf" id="uf" class="form-select">
+							<option value="" disabled selected>UF</option>
+						</select>
+					</div>
+					<div class="form-group col-md-5">
+						<label>Cidade</label>
+						<input type="text" name="cidade" id="cidade" class="form-control">
+					</div>
+					<div class="form-group col-md-5">
+						<label>Bairro</label>
+						<input type="text" name="bairro" id="bairro" class="form-control">
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-md-2">
+						<label>Urgência</label>
+						<div class="form-radio">
+							<input type="radio" name="urgencia" id="urgenciaS" class="custom-control-input">
+							<label class="custom-control-label" for="urgencia">Sim</label>
+						</div>
+						<div class="form-radio">
+							<input type="radio" name="urgencia" id="urgenciaN" class="custom-control-input" checked>
+							<label class="custom-control-label" for="urgencia">Não</label>
+						</div>
+					</div>
+					<div class="form-group col-md-10">
+						<label>Especialidade</label>
+						<select name="especialidade" id="especialidade" class="form-select">
+							<option value="" disabled selected>Selecione</option>
+							<option value="Acupuntura">Acupuntura</option>
+							<option value="Cirurgia e Traumatologia Bucomaxilofacial">Cirurgia e Traumatologia Bucomaxilofacial</option>
+							<option value="Clínico Geral">Clínico Geral</option>
+							<option value="Dentística">Dentística</option>
+							<option value="Disfunção Temporomandibular e Dor Orofacial">Disfunção Temporomandibular e Dor Orofacial</option>
+							<option value="Endodontia">Endodontia</option>
+							<option value="Estomatologia">Estomatologia</option>
+							<option value="Homeopatia">Homeopatia</option>
+							<option value="Implantodontia">Implantodontia</option>
+							<option value="Odontogeriatria">Odontogeriatria</option>
+							<option value="Odontologia do esporte">Odontologia do esporte</option>
+							<option value="Odontologia do Trabalho">Odontologia do Trabalho</option>
+							<option value="Odontologia para Pacientes com Necessidades Especiais">Odontologia para Pacientes com Necessidades Especiais</option>
+							<option value="Odontopediatria">Odontopediatria</option>
+							<option value="Ortodontia">Ortodontia</option>
+							<option value="Ortopedia Funcional dos Maxilares">Ortopedia Funcional dos Maxilares</option>
+							<option value="Patologia bucal">Patologia bucal</option>
+							<option value="Periodontia">Periodontia</option>
+							<option value="Prótese Bucomaxilofacial">Prótese Bucomaxilofacial</option>
+							<option value="Prótese Dentária">Prótese Dentária</option>
+							<option value="Radiologia Odontológica e Imaginologia">Radiologia Odontológica e Imaginologia</option>
+						</select>
+					</div>
+				</div>
+				</br>
+				<button type="submit" class="btn btn-primary">Buscar</button>
+			</form>
+			</br>
+			<table id="dentistas" class="dentTable">
+				<thead>
+					<tr>
+						<th>Nome</th>
+						<th>CRO</th>
+						<th>Fone</th>
+						<th>Endereço</th>
+						<th>Áreas de Atuação</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>JESSIKA DANIELLA LAZAROTTO</td>
+						<td>CRO 25362</td>
+						<td>(41) 41415647 | (41) 991115068</td>
+						<td>AVENIDA MARECHAL FLORIANO PEIXOTO, 5897 SALA 01, HAUER, CURITIBA, PR CEP: 81610000</td>
+						<td>CLÍNICO GERAL</td>
+					</tr>
+					<tr>
+						<td>THIAGO RODRIGO PASQUALOTTO</td>
+						<td>CRO 21405</td>
+						<td>(41) 991838208</td>
+						<td>RUA IZAAC FERREIRA DA CRUZ, 2035 LOJA 07, SITIO CERCADO, CURITIBA, PR CEP: 81910000</td>
+						<td>CLÍNICO GERAL, DENTÍSTICA, DISFUNÇÃO TEMPOROMANDIBULAR E DOR OROFACIAL, IMPLANTODONTIA, ODONTOGERIATRIA, ODONTOLOGIA DO ESPORTE, ODONTOLOGIA DO TRABALHO, ODONTOLOGIA EM SAUDE COLETIVA, ORTODONTIA, ORTOPEDIA FUNCIONAL DOS MAXILARES, PERIODONTIA, PRÓTESE DENTÁRIA</td>
+					</tr>
+					<tr>
+						<td>FERNANDO ALMEIDA ROTHER</td>
+						<td>CRO 28264</td>
+						<td>(41) 996922976</td>
+						<td>RUA FRANCISCO ROCHA, 62 SALA 1205, BATEL, CURITIBA, PR CEP: 80420130</td>
+						<td>CLÍNICO GERAL, DENTÍSTICA</td>
+					</tr>
+					<tr>
+						<td>ALEXANDRE OTAVIO PACCA DA SILVA MEDEIROS</td>
+						<td>CRO 25451</td>
+						<td>(41) 32253181 | (41) 996305719 | (41) 998836055</td>
+						<td>RUA PALMYRA CRIVELLARO BERTOLDE, 646 SALA 13 ANDAR 01, CAMPO DE SANTANA, CURITIBA, PR CEP: 81490510</td>
+						<td>CLÍNICO GERAL, DENTÍSTICA, DISFUNÇÃO TEMPOROMANDIBULAR E DOR OROFACIAL, ODONTOGERIATRIA, ODONTOLOGIA EM SAUDE COLETIVA, ODONTOPEDIATRIA, ORTODONTIA, ORTOPEDIA FUNCIONAL DOS MAXILARES, PERIODONTIA</td>
+					</tr>
+					<tr>
+						<td>DANIELLE FERRONATO DE SOUZA GOMIDE</td>
+						<td>CRO 11053</td>
+						<td>(41) 33632778 | (41) 996730320</td>
+						<td>RUA DIAS DA ROCHA FILHO, 104 , ALTO DA RUA XV, CURITIBA, PR CEP: 80045130</td>
+						<td>CLÍNICO GERAL, ODONTOPEDIATRIA, ORTODONTIA</td>
+					</tr>
+					<tr>
+						<td>ERIKA LAZARO BRANCO</td>
+						<td>CRO 18711</td>
+						<td>(41) 31229583 | (41) 991678408</td>
+						<td>RUA QUITANDINHA, 406 , SITIO CERCADO, CURITIBA, PR CEP: 81900050</td>
+						<td>CLÍNICO GERAL, DENTÍSTICA, DISFUNÇÃO TEMPOROMANDIBULAR E DOR OROFACIAL, ORTODONTIA, ORTOPEDIA FUNCIONAL DOS MAXILARES, PERIODONTIA</td>
+					</tr>
+					<tr>
+						<td>FRANCIELE DE MELLO CORREA</td>
+						<td>CRO 32971</td>
+						<td>(41) 999038989</td>
+						<td>RUA DOS FERROVIARIOS, 342 , CAJURU, CURITIBA, PR CEP: 82920100</td>
+						<td>CLÍNICO GERAL, DENTÍSTICA, ODONTOPEDIATRIA, ORTODONTIA, PERIODONTIA</td>
+					</tr>
+					<tr>
+						<td>GABRIELA MARCOLINA</td>
+						<td>CRO 30253</td>
+						<td>(41) 999843400</td>
+						<td>AVENIDA SETE DE SETEMBRO, 4698 SALA 809 8º ANDAR, SEMINARIO, CURITIBA, PR CEP: 80240001</td>
+						<td>CLÍNICO GERAL, DENTÍSTICA, PERIODONTIA</td>
+					</tr>
+					<tr>
+						<td>NATHALIA DE MOURA BRIONES ZONATTO</td>
+						<td>CRO 25119</td>
+						<td>(41) 34028012 | (41) 998060142</td>
+						<td>RUA VIA VENETO, 1117 , SANTA FELICIDADE, CURITIBA, PR CEP: 82020470</td>
+						<td>CLÍNICO GERAL</td>
+					</tr>
+					<tr>
+						<td>VALENTINA OSORIO FLORES DE ARAUJO</td>
+						<td>CRO 32631</td>
+						<td>(41) 30726994 | (41) 987127849</td>
+						<td>GENERAL MARIO TOURINHO, 1805 SALA 804, CAMPINA DO SIQUEIRA, CURITIBA, PR CEP: 80740000</td>
+						<td>CLÍNICO GERAL, DENTÍSTICA, ODONTOPEDIATRIA, PERIODONTIA</td>
+					</tr>
+					<tr>
+						<td>VIVIANE FRANCO FREIRE DE SIQUEIRA PORTO</td>
+						<td>CRO 14637</td>
+						<td>(41) 999717208</td>
+						<td>R LUIZ FRANCA, 2101 , CAJURU, CURITIBA, PR CEP: 82940090</td>
+						<td>CLÍNICO GERAL</td>
+					</tr>
+					<tr>
+						<td>ADALBERTO COSTA NETTO</td>
+						<td>CRO 19773</td>
+						<td>(41) 32325531 | (41) 996840319</td>
+						<td>IGUACU, 1427 LOJA 01 TERREO, REBOUCAS, CURITIBA, PR CEP: 80250190</td>
+						<td>CLÍNICO GERAL, DENTÍSTICA, ENDODONTIA, ODONTOLOGIA DO TRABALHO, ODONTOLOGIA EM SAUDE COLETIVA, ODONTOLOGIA LEGAL, PERIODONTIA</td>
+					</tr>
+					<tr>
+						<td>ADRIANA DE MORAIS TAVARES DA SILVA</td>
+						<td>CRO 20359</td>
+						<td>(41) 30821316</td>
+						<td>PAULO SETUBAL, 4558 SALA 02, BOQUEIRAO, CURITIBA, PR CEP: 81750190</td>
+						<td>CLÍNICO GERAL, DENTÍSTICA, IMPLANTODONTIA, ODONTOPEDIATRIA, ORTODONTIA, PERIODONTIA, PRÓTESE DENTÁRIA</td>
+					</tr>
+					<tr>
+						<td>ADRIANA FERNANDES WEFFORT HILBERT</td>
+						<td>CRO 11060</td>
+						<td>(41) 30293882</td>
+						<td>CONSELHEIRO CARRAO, 715 MD 1, HUGO LANGE, CURITIBA, PR CEP: 80040130</td>
+						<td>CLÍNICO GERAL, ODONTOGERIATRIA, PRÓTESE DENTÁRIA</td>
+					</tr>
+					<tr>
+						<td>ADRIANA GALLEGO DONDA CASAGRANDE</td>
+						<td>CRO 17784</td>
+						<td>(41) 996361664</td>
+						<td>RUA EUCLIDES BANDEIRA, 1989 , CENTRO CIVICO, CURITIBA, PR CEP: 80530020</td>
+						<td>CLÍNICO GERAL, DENTÍSTICA, ORTODONTIA, ORTOPEDIA FUNCIONAL DOS MAXILARES</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="footer">
+			<p class="left">Teste Técnico DentalUni</p>
+			<p class="right">Desenvolvido por: Athos Fernandez&nbsp;&nbsp;<a href="https://www.linkedin.com/in/athos-fernandez-818813171/"><img class="linkedin" src="./images/linkedin.png"></a></p>
+		</div>
+	</body>
+
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+	<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="./script.js"></script>
+</html>
